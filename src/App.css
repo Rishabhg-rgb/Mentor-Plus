@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.container{
+  display: flex;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.sidebar{
+  align-items: center;  
+  margin-right: 3rem;
+  padding: 0rem 2rem 0rem 0rem;
+  align-items: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100vh;
+  background-color: rgb(246, 246, 246);
+}
+.content{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: inherit;
+}
+.logo{
+  margin-top: 4rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(5, 3, 105);
+  
+}
+ul{
+  margin-left: 0rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+}
+li{
+  
+  display: flex;
+  align-items: center;
+  align-items: center;
+  list-style: none;
+  padding: 1.3rem 4rem;
+  margin: 1rem 0rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 4rem;
+  height: 1rem;
+  font-weight: bold;
+  color: rgb(4, 43, 94);
+  background-color: azure;
+}
+
+.hamburgericon{
+  display: none;
+  flex-direction: column;
+}
+
+.hamburger{
+  width: 25px;
+  height: 5px;
+  background-color: black;
+  margin: 2px;
+}
+
+
+
+
+.red{
+  border-bottom: 2px solid red;
+
+}
+.blue{
+  border-bottom: 2px solid blue;
+}
+
+.leftarrow{
+  font-size: 2rem;
+  color: gray;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.dates{
+  display: flex;
+
+}
+.date{
+  border: 2px solid rgb(97, 97, 245);
+  border-radius: 5px;
+  padding:1rem;
+  margin: 1rem 1rem;
+  color: black;
+}
+.date:hover{
+  background-color: rgb(5, 143, 35);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.slots{
+  display: flex;
+
+}
+.slot{
+  text-align: center;
+  border:2px solid rgb(97, 97, 245);
+  border-radius: 8px;
+  width: 5rem;
+  margin: 0rem 1rem 5rem 1rem;
+  padding: 1rem;
+}
+.slot:hover{
+  background-color: rgb(5, 143, 35);
+  color: white;
+  cursor: pointer;
+}
+
+
+button{
+  padding:1rem 2rem;
+  background: linear-gradient(to right, darkblue, rgb(3, 3, 75));
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.active{
+  background-color:  rgb(5, 143, 35);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  cursor: pointer;
+}
+
+
+
+@media (max-width:600px) {
+ ul{
+   display: none;
+ } 
+ .container{
+   width: inherit;
+   display: flex;
+   flex-direction: column;
+   width: 50rem;
+   width: inherit;
+ }
+ .sidebar{
+   display: flex;
+   flex-direction: row;
+   width: inherit;
+   justify-content: space-between;
+   height: fit-content;
+   padding: 1rem 0rem;
+   margin: 0%;
+   box-shadow: 0px 6px 7px gray;
+ }
+ .logo{
+   margin: 0%;
+ }
+ .hamburgericon{
+   display: block;
+ }
+ .leftarrow{
+   display: none;
+ }
+ .dates{
+   flex-wrap: wrap;
+ }
 }
